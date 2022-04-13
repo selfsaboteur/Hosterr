@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f9f4e8;
+    color: #1c1c1c;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+#content {
+    display: grid;
+    margin: 50px 140px;
+    /*border: solid darkred;*/
+}
+
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin-bottom: 150px;
+}
+
+#logo {
+    display: grid;
+    grid-template-columns: 120px 120px;
+}
+
+#logo img {
+    height: 25px;
+    width: 110px;
+}
+
+header #logo p {
+    background-image: linear-gradient(to right, #f58814, #fa2a3f);
+    height: 15px;
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+nav {
+    text-align: right;
+}
+
+nav a {
+    padding-left: 15px;
+}
+
+#author {
+    text-align: right;
+}
+
+#author a {
+    padding-left: 15px;
+}
+
+.button {
+    background-color: #3879fc;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /*border: solid black;*/
+    margin-bottom: 130px;
+}
+
+#mainText {
+    padding-top: 35px;
+    /*border: solid violet;*/
+}
+
+main h1 {
+    font-size: 60px;
+    font-family: serif;
+    margin-bottom: 15px;
+}
+
+main form {
+    margin: 15px 0px;
+}
+
+#checkmark {
+    display: grid;
+    grid-template-columns: 35px 400px;
+}
+
+#checkmark p {
+    padding-top: 2px;
+}
+
+#email {
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+#mainPicture {
+    position: relative;
+    /*border: solid yellow;*/
+}
+
+#mainPicture img {
+    position: absolute;
+    height: 400px;
+    /*right: 0;*/
+    right: 0;
+}
+
+#blue {
+    z-index: 0;
+    transform: rotate(-45deg);
+}
+
+#pink {
+    z-index: 1;
+    transform: rotate(-30deg);
+}
+
+#purple {
+    z-index: 2;
+    transform: rotate(-15deg);
+}
+
+#hero {
+    z-index: 3;
+}
+
+footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /*position: absolute;*/
+    bottom: 15px;
+    /*border: solid black;*/
+}
+
+footer a {
+    padding-right: 15px;
+}
+
+#socialLinks {
+    padding-top: 12px;
+}
+
+footer #question {
+    display: grid;
+    grid-template-columns: 60px 200px;
+    /*border: solid orange;*/
+    padding-left: 45%;
+}
+
+#question p {
+    font-family: serif;
+    font-size: 1.2em;
+}
+
+#question a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 1200px) {
+    #content {
+        margin: 50px 50px;
+    }
+    #content {
+        width: 88%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding-bottom: 30px;
+        /*border: solid aquamarine;*/
+    }
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-bottom: 70px;
+        /*border: solid black;*/
+        height: 700px;
+        grid-row-gap: 30px;
+        align-items: stretch;
+        /*justify-items: center;*/
+    }
+    #mainPicture {
+        /*border: solid red;*/
+        grid-row-start: 1;
+    }
+    #mainPicture img {
+        right: 25%;
+    }
+    #hero {}
+    header {
+        margin-bottom: 20px;
+    }
+    header nav {
+        display: grid;
+        text-align: center;
+    }
+    #logo {
+        padding-top: 20px;
+    }
+    #author {
+        padding-top: 20px;
+    }
+    footer {
+        width: 100%;
+        /*border: solid green;*/
+    }
+    footer #question {
+        padding-left: 20%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #mainPicture img {
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 692px) {
+    header {
+        grid-template-columns: 100%;
+        grid-row-gap: 15px;
+    }
+    header nav {
+        text-align: left;
+    }
+    #author {
+        text-align: left;
+    }
+    #mainPicture img {
+        height: 300px;
+    }
+    #content {
+        margin: 10px 10px;
+    }
+    footer {
+        grid-template-columns: 100%;
+        grid-row-gap: 30px;
+        margin: 30px 0px;
+    }
+    footer #question {
+        padding-left: 0%;
+    }
+    main form {
+        display: grid;
+        grid-row-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    /*main {
+        grid-row-gap: 330px;
+    }*/
+    #mainPicture {
+        height: 250px;
+    }
+    #content {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    header {
+        width: 80%;
+    }
+    main {
+        width: 80%;
+    }
+    #mainText {
+        width: 80%;
+    }
+    #mainPicture {
+        width: 80%;
+    }
+    #mainPicture img {
+        right: 10%;
+    }
+    footer {
+        width: 80%;
+        margin-top: 120px;
+    }
+    #content {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    header {
+        width: 360px;
+    }
+    main {
+        width: 360px;
+    }
+    #mainText {
+        width: 360px;
+    }
+    #mainPicture {
+        width: 360px;
+    }
+    footer {
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    header {
+        width: 340px;
+    }
+    main {
+        width: 340px;
+    }
+    #mainText {
+        width: 340px;
+    }
+    #mainPicture {
+        width: 340px;
+    }
+    footer {
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header {
+        width: 310px;
+        font-size: 15px;
+    }
+    main {
+        width: 310px;
+        grid-row-gap: 0px;
+    }
+    #mainText {
+        width: 310px;
+        font-size: 15px;
+    }
+    #mainText h1 {
+        font-size: 40px;
+    }
+    #mainPicture {
+        width: 310px;
+        height: 200px;
+    }
+    #mainPicture img {
+        height: 200px;
+        right: 20%;
+    }
+    footer {
+        width: 310px;
+        font-size: 15px;
+        margin-top: 0px;
+    }
+}
